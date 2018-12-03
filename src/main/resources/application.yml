@@ -1,0 +1,47 @@
+server:
+  port: 9090
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test
+    username: sa
+    password: sa
+  #
+  #  datasource:
+  #    driver-class-name: org.mariadb.jdbc.Driver
+  #    url: jdbc:mariadb://ec2-13-125-38-65.ap-northeast-2.compute.amazonaws.com:3306/web
+  ##    url: jdbc:mysql://localhost:3306/web?serverTimezone=Asia/Seoul
+  #    username: jason
+  #    password: qwe123
+  #    h2:
+  #    console:
+  #      enabled: true
+  #      path: /h2
+  #      settings:
+  #        trace: true
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        trace: true
+        web-allow-others: true
+
+# H2 메모리 DB를 사용하기 위한 설정
+#datasource:
+#  url: jdbc:h2:mem:testdb
+
+
+
+
